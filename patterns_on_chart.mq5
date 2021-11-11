@@ -422,10 +422,10 @@ string GetTime(datetime timeshift)
    break;
    case PERIOD_H1:
    case PERIOD_H4:
-   eventTime = "Day: " +(string)stm.day + "\n" + "Hour: " + (string)stm.hour + "\n" + "Minute: " + (string)stm.min;
+   eventTime = "Day: " +(string)stm.day + "\n" + "Hour: " + (string)stm.hour;
    break;
    case PERIOD_D1:
-   eventTime = "Month: " + (string)stm.mon + "\n" +"Day: " + (string)stm.day + "\n" + "Hour: " + (string)stm.hour;
+   eventTime = "Month: " + (string)stm.mon + "\n" +"Day: " + (string)stm.day;
    break;
    case PERIOD_W1:
    eventTime = "Year: " + (string)stm.year + "\n" + "Month: " + (string)stm.mon + "\n" +"Day: " + (string)stm.day;   
@@ -864,7 +864,8 @@ int OnCalculate(const int rates_total,
               }
            }
         }
-      // End of Bullish Patterns                
+      // End of Bullish Patterns 
+                     
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
       if((setalert==1) && (shift==0))
